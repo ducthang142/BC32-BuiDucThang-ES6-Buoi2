@@ -138,9 +138,20 @@ dom("#vglassesList").addEventListener("click", (evt) => {
 
 //Hàm hiển thị kính lên người mẫu ở bên phải
 function displayModal(glass) {
-  let html = `
-    <img src="${glass.virtualImg}" width="150px" height="auto" />
+  //
+  let avatar = `
+    <img src="${glass.virtualImg}" />
     `;
 
-  dom("#avatar").innerHTML = html;
+  //
+  let info = `
+    <p>${glass.name} - ${glass.brand} (${glass.color})</p>
+    <p>$${glass.price} - Stocking</p>
+    <p>${glass.description}</p>
+    `;
+
+  dom("#avatar").innerHTML = avatar;
+  dom("#glassesInfo").style.display = "block";
+  dom("#glassesInfo").innerHTML = info;
+
 }
