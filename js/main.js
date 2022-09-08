@@ -136,14 +136,14 @@ dom("#vglassesList").addEventListener("click", (evt) => {
   displayModal(dataGlasses[index]);
 });
 
-//Hàm hiển thị kính lên người mẫu ở bên phải
+//Hàm hiển thị kính lên người mẫu ở bên phải và hiện thông tin của kính
 function displayModal(glass) {
-  //
+  //hiển thị kính lên người mẫu
   let avatar = `
     <img src="${glass.virtualImg}" />
     `;
 
-  //
+  //hiện thông tin của kính
   let info = `
     <p>${glass.name} - ${glass.brand} (${glass.color})</p>
     <p>$${glass.price} - Stocking</p>
